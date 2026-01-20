@@ -1,3 +1,174 @@
+# 🎯 Case-1 — A/B Test Simulation & Strategic Scenario Comparison
+
+This project analyzes an A/B test on a game difficulty flow using a simulation-based approach.  
+The goal is to understand how two variants (A and B) perform over time in terms of:
+
+- **Retention dynamics**,  
+- **Daily Active Users (DAU)**, and  
+- **Total monetization under different strategic scenarios.**
+
+Rather than relying only on observed retention points, the analysis fits a parametric retention model and projects outcomes up to Day 30 under multiple what-if settings.
+
+---
+
+## 📌 Business Questions
+
+The analysis answers the following questions:
+
+1. Which variant has more **Daily Active Users on Day 15?**  
+2. Which variant earns more **total revenue by Day 15?**  
+3. Does the winner change when looking at **Day 30 revenue?**  
+4. What happens if we run a **10-day temporary sale (Day 15–25)?**  
+5. What if a **new user source** is introduced on Day 20 with different retention dynamics?  
+6. If only one improvement can be made, which should be prioritized:  
+   - a temporary sale, or  
+   - a permanent new user source?
+
+---
+
+## 📌 Modeling Approach
+
+### 1) Retention Modeling
+
+Observed retention points were available at D1, D3, D7, and D14 for both variants.
+
+To estimate daily retention between these points, an exponential decay model was fitted:
+R(d) = R1 · exp(−k · (d − 1))
+
+This allowed us to:
+
+- interpolate retention for every day from 1 to 30,  
+- compute cohort survival accurately, and  
+- derive realistic DAU curves over time.
+
+---
+
+### 2) DAU Calculation
+
+For each day: 
+DAU(d) = daily_installs × sum of retention of all active cohorts
+
+
+This means Day-15 DAU reflects the **combined survivors of 15 daily cohorts**, not just the D15 retention rate.
+
+---
+
+### 3) Revenue Simulation
+
+Daily revenue consisted of two components:
+
+**Ad Revenue**
+DAU × ads_per_DAU × eCPM / 1000
+
+**IAP Revenue (assumed)**
+DAU × purchase_ratio × avg_purchase_value
+
+
+Total revenue was accumulated day by day up to Day 30.
+
+---
+
+## 📌 Key Findings
+
+### 🔹 Day 15 Results
+
+- **DAU winner:** Variant **B**  
+  - Lower initial retention, but **slower decay** → more active users from older cohorts.
+
+- **Revenue winner by Day 15:** Variant **A**  
+  - Higher early retention + higher ad impressions per user created a short-term advantage.
+
+---
+
+### 🔹 Day 30 Results
+
+- By Day 30, **Variant B overtakes Variant A in total revenue.**  
+- The reason is its **stronger long-term retention (D14: 9% vs 6%)** combined with better monetization efficiency.
+
+👉 Lesson:  
+> Short-term wins do not guarantee long-term value.
+
+---
+
+## 📌 10-Day Sale Scenario (Day 15–25)
+
+A temporary 1% uplift in purchase ratio was simulated.
+
+**Outcome:**
+- The sale increases total revenue for both variants.
+- However, **Variant B remains the winner by Day 30.**
+
+This suggests that retention advantages dominate short-term purchase boosts.
+
+---
+
+## 📌 New User Source (Day 20 Onwards)
+
+From Day 20 onward:
+
+- 12,000 users/day from the original source  
+- 8,000 users/day from a new source with different retention curves
+
+Under this mixed-source setting:
+
+- **Variant B again generates more total revenue by Day 30.**
+- Better long-term retention compounds even more with fresh users.
+
+---
+
+## 📌 Strategy Prioritization (Part f)
+
+We compared two strategic options:
+
+1. **Run a 10-day sale (temporary uplift)**  
+2. **Add a new permanent user source**
+
+### Decision rule:
+Compare total company revenue (A + B) under each strategy versus baseline.
+
+**Winner: New User Source Mix**
+
+Why?
+
+- The sale creates a **one-time spike**,  
+- The new source creates **sustained incremental value over time**.
+
+---
+
+## 📌 Visualization (Single Key Chart)
+
+![Strategy comparison](screenshots/strategy_comparison.png)
+
+This bar chart compares **30-day total revenue** under three scenarios:
+
+- Baseline (no change)  
+- 10-Day Sale  
+- New User Source Mix  
+
+It visually summarizes the strategic trade-off in a single, clear figure.
+
+---
+
+## 📌 Conclusion
+
+This case demonstrates that:
+
+- Retention modeling is critical for A/B evaluation,  
+- Early wins can be misleading,  
+- Long-term retention dominates short-term monetization tweaks, and  
+- Structural user growth (new source) is often more valuable than temporary promotions.
+
+---
+
+## ✍️ Author
+
+**Burak Gocer**  
+**2026-01-20**
+
+
+
+
+
 # 🎯 Case-2 — Player Analytics, PCA & Behavioral Segmentation
 
 This project presents an end-to-end analytics study based on multi-period game telemetry data that includes:
