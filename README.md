@@ -22,9 +22,6 @@ This analysis addresses the following key questions:
 - How many distinct behavioral player groups exist?  
 - What product and marketing actions should be taken for each segment?
 
-> 🖼️ **Image 1 — Use on Slide 1: “Analytics Roadmap”**  
-> Place a diagram that illustrates the end-to-end pipeline (Data → Features → PCA → Segments).
-
 ---
 
 ## 📌 Data Source
@@ -54,9 +51,6 @@ The raw dataset consists of daily event records per user, including:
 
 A total of **17 separate CSV files** were merged into a single unified event table.
 
-> 🖼️ **Image 2 — Use on Slide 2: “Raw Data Landscape”**  
-> Display a timeline visual showing the multi-period nature of the data.
-
 ---
 
 ## 📌 Event-Level to User-Level Transformation
@@ -72,9 +66,6 @@ A key derived metric was created:
 
 
 This represents player skill, in-game performance, and potential loyalty.
-
-> 🖼️ **Image 3 — Use on Slide 3: “From Events to Users”**  
-> Show a flow diagram of the event-to-user transformation.
 
 ---
 
@@ -101,8 +92,7 @@ Interpretation:
 The distributions of all numerical features were examined and found to be highly skewed.  
 Therefore, specialized transformations were applied before PCA.
 
-> 🖼️ **Image 4 — Use on Slide 4: “Raw Feature Distributions”**  
-> Display the grid of histograms for all numeric variables.
+![Feature distributions](screenshots/hist.png)
 
 ---
 
@@ -157,7 +147,7 @@ Key findings from the correlation heatmap:
 5. **Recency is a strong churn signal**  
    Lower engagement → higher days since last active.
 
-> 🖼️ **Image 5 — Use on Slide 5: “Correlation Heatmap”**
+![Correlation heatmap](screenshots/corr_matrix.png)
 
 ---
 
@@ -260,9 +250,6 @@ Four segments were identified using PCA scores.
 | S2 | Medium | Medium | Medium | Low |
 | S0 | Very Low | Very High | Low | Very Low |
 
-> 🖼️ **Image 10 — Use on Slide 10: “Cluster Scatter (PC1 vs PC2)”**  
-> Show the PCA scatter plot with segment labels.
-
 ---
 
 ## 📌 Conclusion
@@ -278,5 +265,5 @@ This analysis delivers:
 
 ## ✍️ Author
 
-**[Burak Gocer]**  
-**[2026-01-20]**
+**Burak Gocer**  
+**2026-01-20**
