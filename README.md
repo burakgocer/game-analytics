@@ -182,11 +182,19 @@ Contrasts win efficiency vs play volume.
 Positive = efficient winner  
 Negative = high-volume but less efficient player.
 
-> 🖼️ **Images 6–9 — Use on Slides 6–9 (one per slide):**  
-> - Slide 6: PC1 Loadings  
-> - Slide 7: PC2 Loadings  
-> - Slide 8: PC3 Loadings  
-> - Slide 9: PC4 Loadings  
+## PCA Results
+
+### PCA — Component 1 (Gameplay Engagement)
+![PCA1 Loadings](screenshots/PCA1.png)
+
+### PCA — Component 2 (Recency / Churn Risk)
+![PCA2 Loadings](screenshots/PCA2.png)
+
+### PCA — Component 3 (Technical Friction)
+![PCA3 Loadings](screenshots/PCA3.png)
+
+### PCA — Component 4 (Efficiency vs Volume)
+![PCA4 Loadings](screenshots/PCA4.png)
 
 ---
 
