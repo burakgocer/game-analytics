@@ -137,7 +137,7 @@ Why?
 
 ## 📌 Visualization (Single Key Chart)
 
-![Strategy comparison](screenshots/strategy_comparison.png)
+![Strategy comparison](screenshots/strategy-comparison.png)
 
 This bar chart compares **30-day total revenue** under three scenarios:
 
