@@ -1,4 +1,4 @@
-# 🎯 Case-1 — A/B Test Simulation & Strategic Scenario Comparison
+# Case-1 — A/B Test Simulation & Strategic Scenario Comparison
 
 This project analyzes an A/B test on a game difficulty flow using a simulation-based approach.  
 The goal is to understand how two variants (A and B) perform over time in terms of:
@@ -11,7 +11,7 @@ Rather than relying only on observed retention points, the analysis fits a param
 
 ---
 
-## 📌 Business Questions
+## Business Questions
 
 The analysis answers the following questions:
 
@@ -26,7 +26,7 @@ The analysis answers the following questions:
 
 ---
 
-## 📌 Modeling Approach
+## Modeling Approach
 
 ### 1) Retention Modeling
 
@@ -68,9 +68,9 @@ Total revenue was accumulated day by day up to Day 30.
 
 ---
 
-## 📌 Key Findings
+## Key Findings
 
-### 🔹 Day 15 Results
+### Day 15 Results
 
 - **DAU winner:** Variant **B**  
   - Lower initial retention, but **slower decay** → more active users from older cohorts.
@@ -80,17 +80,17 @@ Total revenue was accumulated day by day up to Day 30.
 
 ---
 
-### 🔹 Day 30 Results
+### Day 30 Results
 
 - By Day 30, **Variant B overtakes Variant A in total revenue.**  
 - The reason is its **stronger long-term retention (D14: 9% vs 6%)** combined with better monetization efficiency.
 
-👉 Lesson:  
+Lesson:  
 > Short-term wins do not guarantee long-term value.
 
 ---
 
-## 📌 10-Day Sale Scenario (Day 15–25)
+## 10-Day Sale Scenario (Day 15–25)
 
 A temporary 1% uplift in purchase ratio was simulated.
 
@@ -102,7 +102,7 @@ This suggests that retention advantages dominate short-term purchase boosts.
 
 ---
 
-## 📌 New User Source (Day 20 Onwards)
+## New User Source (Day 20 Onwards)
 
 From Day 20 onward:
 
@@ -116,7 +116,7 @@ Under this mixed-source setting:
 
 ---
 
-## 📌 Strategy Prioritization (Part f)
+## Strategy Prioritization (Part f)
 
 We compared two strategic options:
 
@@ -135,7 +135,7 @@ Why?
 
 ---
 
-## 📌 Visualization (Single Key Chart)
+## Visualization (Single Key Chart)
 
 ![Strategy comparison](screenshots/strategy-comparison.png)
 
@@ -149,7 +149,7 @@ It visually summarizes the strategic trade-off in a single, clear figure.
 
 ---
 
-## 📌 Conclusion
+## Conclusion
 
 This case demonstrates that:
 
@@ -160,7 +160,7 @@ This case demonstrates that:
 
 ---
 
-## ✍️ Author
+## Author
 
 **Burak Gocer**  
 **2026-01-20**
@@ -169,7 +169,7 @@ This case demonstrates that:
 
 
 
-# 🎯 Case-2 — Player Analytics, PCA & Behavioral Segmentation
+# Case-2 — Player Analytics, PCA & Behavioral Segmentation
 
 This project presents an end-to-end analytics study based on multi-period game telemetry data that includes:
 
@@ -183,7 +183,7 @@ The objective is not only to build a model, but to **conceptualize player behavi
 
 ---
 
-## 📌 Business Problem
+## Business Problem
 
 This analysis addresses the following key questions:
 
@@ -195,7 +195,7 @@ This analysis addresses the following key questions:
 
 ---
 
-## 📌 Data Source
+## Data Source
 
 The raw dataset consists of daily event records per user, including:
 
@@ -224,7 +224,7 @@ A total of **17 separate CSV files** were merged into a single unified event tab
 
 ---
 
-## 📌 Event-Level to User-Level Transformation
+## Event-Level to User-Level Transformation
 
 Event data was aggregated at the `user_id` level using:
 
@@ -240,7 +240,7 @@ This represents player skill, in-game performance, and potential loyalty.
 
 ---
 
-## 📌 Recency & Inter-Visit Gap
+## Recency & Inter-Visit Gap
 
 ### Recency  
 
@@ -258,7 +258,7 @@ Interpretation:
 
 ---
 
-## 📌 Distribution Analysis (Histograms)
+## Distribution Analysis (Histograms)
 
 The distributions of all numerical features were examined and found to be highly skewed.  
 Therefore, specialized transformations were applied before PCA.
@@ -267,7 +267,7 @@ Therefore, specialized transformations were applied before PCA.
 
 ---
 
-## 📌 Feature Transformation Strategy (Pre-PCA)
+## Feature Transformation Strategy (Pre-PCA)
 
 ### 1) Custom Binning (Zero-Inflated Variables)
 Applied to:
@@ -299,7 +299,7 @@ Finally, all features were standardized using **StandardScaler**.
 
 ---
 
-## 📌 Correlation Insights
+## Correlation Insights
 
 Key findings from the correlation heatmap:
 
@@ -322,7 +322,7 @@ Key findings from the correlation heatmap:
 
 ---
 
-## 📌 PCA — Core Behavioral Dimensions
+## PCA — Core Behavioral Dimensions
 
 Four principal components were selected:
 
@@ -359,7 +359,7 @@ Negative = high-volume but less efficient player.
 
 ---
 
-## 📌 K-Means Player Segmentation
+## K-Means Player Segmentation
 
 Four segments were identified using PCA scores.
 
@@ -412,7 +412,7 @@ Four segments were identified using PCA scores.
 
 ---
 
-## 📌 Segment Summary
+## Segment Summary
 
 | Segment | Activity | Recency | Efficiency | Technical Issues |
 |---------|----------|---------|------------|------------------|
@@ -423,7 +423,7 @@ Four segments were identified using PCA scores.
 
 ---
 
-## 📌 Conclusion
+## Conclusion
 
 This analysis delivers:
 
@@ -434,7 +434,7 @@ This analysis delivers:
 
 ---
 
-## ✍️ Author
+## Author
 
 **Burak Gocer**  
 **2026-01-20**
